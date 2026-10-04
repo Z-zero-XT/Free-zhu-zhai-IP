@@ -51,7 +51,8 @@ VPNGATE_MIRROR = os.environ.get(
     "https://raw.githubusercontent.com/fdciabdul/Vpngate-Scraper-API/main/json/data.json",
 )
 # 已部署的 Cloudflare Worker 检测接口 (GET /check?proxyip=host:port, 实测确认)
-WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://check.helei.kdns.fr/check?sstp=vpn:vpn@")
+WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://soft-fog-4f4b.zhxintian74.workers.dev
+/check?sstp=vpn:vpn@")
 CONCURRENCY = max(1, int(os.environ.get("CHECK_CONCURRENCY", "32")))   # 与 Worker 网页端一致的并发模型
 CHECK_TIMEOUT = float(os.environ.get("CHECK_TIMEOUT", "90"))          # 单请求客户端超时 (秒)
 MAX_CHECK_NODES = int(os.environ.get("MAX_CHECK_NODES", "0"))         # 0=不限; 本地测试可设小值
@@ -460,8 +461,7 @@ EDGE_HOSTS = [
     h.strip()
     for h in os.environ.get(
         "EDGE_HOSTS",
-        "saas.072159.xyz:443,hzytjy.cn:443,ali.nonull.pp.ua:443,auto.dolby.dpdns.org:443,"
-        "cdn.cnno.de:443,saas.sin.fan:443,cf.777791.xyz:443",
+        "www.oopt.eu.cc:443,,www.revechat.com:443,cdn.2x.nz:443,api2-ide.imgnxa.com:443,js.org:443,kwiat.com:443,www.libvio.site:443,www.5h.com:443,cloudflare-ip.mofashi.ltd:443,www.npmjs.com:443,cnllm.com:443,www.swowd.com:443,cdn.cnno.de:443,101yaoye.com:443,cf.090227.xyz:443,cdnjs.loli.net:443,9mod.com:443,so.360832.xyz:443,visa.com:443,www.trumpgolf.com:443,cf.3666888.xyz:443,ovpnspider.com:443,www.gov.il:443,www.vastnovel.com:443,hashi.sbs:443,cdns.doon.eu.org:443,ys2046.cv:443,webn.cc:443,sunkist.com:443,www.sloomb.com:443,guide.for.edu.sg:443,egov.uscis.gov:443,ncc.gov.ng:443,img.dexbug.com:443,dash.domain.digitalplat.org:443,fonts.cdnfonts.com:443,redis.io:443,cf.468123.xyz:443,i.pixiv.re:443,api.producthunt.com:443,rocketreach.co:443,autz.org:443,vueframework.com:443,totoro.im:443,images.chesscomfiles.com:443,mogas.com:443,www.mfyx.cn:443,www.chess.com:443,sourceforge.net:443,store.ubisoft.com:443,liziye.pages.dev:443,cdn.violet.vin:443,staticdelivery.nexusmods.com:443,cdn.jwcmdr.top:443,cf.qq.ms:443,pure.coupert.com:443,smapi.xystem138.com:443,uspto.gov:443,investorrelations.medtronic.com:443,cf.877774.xyz:443,yong.880805.xyz:443,themeisle.com:443,encryptedsni.com:443,cn.vuejs.org:443,cdn.ctn32.us.kg:443,jojolsj.jojojing.top:443,yong.m123.org:443,gateway.ipfsscan.io:443,www.5199dy.com:443,zoominfo.com:443,d.lma.de5.net:443,dongbanghong.com:443,servo.org:443,deepseek.com.hk:443,dl.macked.app:443,cmcc.cc.cd:443,coreweave.com:443,stonexbullion.com:443,www.xiaoshuofen.com:443,spring.io:443,grass.io:443,saas.sin.fan:443,test.509666.xyz:443,registry.yarnpkg.com:443,cfplus.255520.xyz:443,www.elysee.fr:443,aqua-aria.company:443,hitcon.org:443,cfip-ct.stoeaves.us.ci:443,constitution.congress.gov:443,cf-cname.xingpingcn.top:443,www.visa.com.hk:443,email.lg.com:443,thebeat.gehealthcare.com:443,kickstarter.com:443,img.856518.xyz:443,c-power.com.cn:443,syncfusion.com:443,flightradar24.com:443,shabak.gov.il:443,elegantthemes.com:443,www.dg22.top:443,bitsight.com:443,lt.1930812.xyz:443,www.shopify.com:443,griditapp.com:443,www2.rarbggo.to:443,mokeedev.com:443,www.crazygames.fr:443,kaspa.stream:443,cdn.nodeimage.com:443,www.apnic.net:443,cdn.555586.xyz:443,development.ihg.com:443,sharray.net:443,nist.gov:443,helium.computer:443,tt.78607323.xyz:443,www.timbuktutravel.com:443,kernelsu.com:443,time.is:443,support.communilink.net:443,sellerlogic.com:443,www.applevis.com:443,resources.biginterview.com:443",
     ).split(",")
     if h.strip()
 ]
@@ -522,8 +522,8 @@ def build_hosts_text(data):
 
 
 # edgetunnel 完整订阅 (vless://) 配置
-EDT_UUID = os.environ.get("EDT_UUID", "90c14586-42a5-4c30-959d-8b36608d67f7")
-EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "ed.xiaolei.qzz.io")
+EDT_UUID = os.environ.get("EDT_UUID", "1612d4c0-9d57-4312-9bcd-03bc9e4bfcd9")
+EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "calm-king-bada.zhxintian74.workers.dev")
 EDT_FINGERPRINT = os.environ.get("EDT_FINGERPRINT", "chrome")
 SUB_URL = os.environ.get("SUB_URL", "https://jerylihub.github.io/gate/sub.txt")
 
